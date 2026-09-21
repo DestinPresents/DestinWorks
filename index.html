@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destin Work</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" id="brandLink">Destin <span>Work</span></a>
+    <div class="top-actions">
+      <div id="userMini" class="user-mini hidden">
+        <span id="miniName">User</span>
+        <small>ID: <b id="miniId">------</b></small>
+      </div>
+      <button id="headerAuthBtn" class="ghost-btn">Login</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- AUTH -->
+    <section id="authView" class="view">
+      <div class="auth-card">
+        <div class="logo-mark">DW</div>
+        <h1 id="authTitle">Welcome to Destin Work</h1>
+        <p id="authSubtitle">Create your account to continue.</p>
+
+        <form id="authForm">
+          <div id="nameGroup" class="field hidden">
+            <label for="nameInput">Full Name</label>
+            <input id="nameInput" type="text" autocomplete="name" maxlength="80" placeholder="Enter your name">
+          </div>
+
+          <div class="field">
+            <label for="authEmail">Email Address</label>
+            <input id="authEmail" type="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label for="authPassword">Password</label>
+            <div class="password-wrap">
+              <input id="authPassword" type="password" autocomplete="current-password" required minlength="6" placeholder="Enter password">
+              <button type="button" class="show-pass" data-target="authPassword">Show</button>
+            </div>
+          </div>
+
+          <div id="confirmGroup" class="field hidden">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="password-wrap">
+              <input id="confirmPassword" type="password" autocomplete="new-password" minlength="6" placeholder="Re-enter password">
+              <button type="button" class="show-pass" data-target="confirmPassword">Show</button>
+            </div>
+          </div>
+
+          <button id="authSubmit" class="primary-btn" type="submit">Login</button>
+        </form>
+
+        <button id="forgotBtn" class="text-btn">Forgot password?</button>
+
+        <p class="switch-text">
+          <span id="switchPrompt">Don't have an account?</span>
+          <button id="switchMode" class="text-btn inline">Create one</button>
+        </p>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="dashboardView" class="view hidden">
+      <div class="dashboard-card">
+        <div class="profile-strip">
+          <div class="avatar" id="avatar">U</div>
+          <div>
+            <p class="eyebrow">Logged in as</p>
+            <h2 id="profileName">User</h2>
+            <p class="profile-id">User ID: <strong id="profileId">------</strong></p>
+          </div>
+          <button id="logoutBtn" class="ghost-btn">Logout</button>
+        </div>
+
+        <div class="hero-panel">
+          <p class="eyebrow">Destin Work</p>
+          <h1>Complete your work</h1>
+          <p>Submit an email address and your own reference number to record your work.</p>
+          <div class="reward">You will earn <strong>5 points</strong></div>
+          <div class="instructions">
+            <h3>Instructions</h3>
+            <ul>
+              <li>Use an email address you are authorized to submit.</li>
+              <li>The submitted email can only be added once.</li>
+              <li>Your reference number can contain letters, numbers, spaces and symbols.</li>
+              <li>Never enter another person's email password here.</li>
+            </ul>
+          </div>
+          <button id="startBtn" class="primary-btn large">Start</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBMISSION -->
+    <section id="submitView" class="view hidden">
+      <div class="submit-card">
+        <button id="backBtn" class="back-btn">← Back</button>
+        <div class="logo-mark small">DW</div>
+        <h1>Submit Email</h1>
+        <p class="muted">Enter the email address you are authorized to submit.</p>
+
+        <form id="submitForm">
+          <div class="field">
+            <label for="submittedEmail">Email ID</label>
+            <input id="submittedEmail" type="email" required autocomplete="off" placeholder="example@email.com">
+          </div>
+
+          <div class="field">
+            <label for="referenceNumber">Number</label>
+            <input id="referenceNumber" type="text" autocomplete="off"
+                   placeholder="Enter any reference text"
+                   maxlength="1000">
+            <small class="hint">Letters, numbers, underscores, spaces and symbols are allowed.</small>
+          </div>
+
+          <button id="submitWorkBtn" class="primary-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Destin Work</footer>
+
+  <!-- Firebase SDK -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
