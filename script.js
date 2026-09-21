@@ -1,20 +1,11 @@
-/*
-      ================= FIREBASE SETUP =================
-      Replace the values below with your Firebase Web App config.
-      Enable:
-        Authentication -> Sign-in method -> Email/Password
-        Firestore Database
-    */
-    // ================= DESTIN WORK FIREBASE CONFIG =================
-    // Replace ONLY the values below with your Firebase Web App config.
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT.firebasestorage.app",
-      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-      appId: "YOUR_APP_ID"
-    };
+const firebaseConfig = {
+  apiKey: "AIzaSyDRZk8QbQogXg3esJ6fB9Y5Tbj0PDj52vo",
+  authDomain: "destinworks.firebaseapp.com",
+  projectId: "destinworks",
+  storageBucket: "destinworks.firebasestorage.app",
+  messagingSenderId: "737700226997",
+  appId: "1:737700226997:web:09f44f8665c3a2ef4e9bfc"
+};
 
     const CONFIG_PLACEHOLDER = "YOUR_";
     const isFirebaseConfigured = Object.values(firebaseConfig)
